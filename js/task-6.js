@@ -26,21 +26,23 @@ function create() {
 function createBoxes(amount) {
   const boxes = document.querySelector("#boxes");
   let sise = 30;
+  const boxArray = [];
   for (let i = 0; i < amount; i++) {
   const div = document.createElement("div");
   div.style.width = `${sise}px`;
   div.style.height = `${sise}px`;
   div.style.backgroundColor = getRandomHexColor();
-  boxes.append(div);
+  boxArray.push(div);
   sise = sise + 10;
   }
+  boxes.append(...boxArray);
 }
 
-function deletEl() {
+function deleteEl() {
   const del = document.querySelector("#boxes");
   del.innerHTML = "";
 }
 
 
 createButton.onclick = create;
-destroyButton.onclick = deletEl;
+destroyButton.onclick = deleteEl;

@@ -38,14 +38,7 @@ function createBoxes(amount) {
 
 function deletEl() {
   const del = document.querySelector("#boxes");
-  const delchildren = del.children;
-  console.log(delchildren.length);
-  for(let i = 0; i < delchildren.length; i++) {
-    delchildren[i].parentNode.removeChild(delchildren[i]);
-    let a = 0;
-    a = a + 1;
-    console.log(a);
-  }
+  del.innerHTML = "";
 }
 
 

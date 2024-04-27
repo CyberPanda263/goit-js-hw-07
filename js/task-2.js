@@ -42,10 +42,11 @@ const gallery = images.map(image => {
 });
 
 const list = document.querySelector(".gallery");
+list.style.margin = "0 auto";
+list.style.maxWidth = "1260px";
 list.style.display = "flex";
 list.style.flexWrap = "wrap";
 list.style.gap = "10px";
-list.style.margin = "0";
 list.style.listStyle = "none";
 list.style.justifyContent = "center";
 list.append(...gallery);

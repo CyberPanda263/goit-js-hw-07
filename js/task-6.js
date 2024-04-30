@@ -16,7 +16,7 @@ function create() {
     amount = value;
     const div = document.querySelector("#boxes");
     if(div.children.length > 0) {
-      deletEl()
+      deleteEl()
     }
     createBoxes(amount);
   }
